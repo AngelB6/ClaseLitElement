@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pollito": "web-dev-server --node-resolve --open --watch"
+    "start": "web-dev-server --node-resolve --open --watch"
   },
   "author": "",
   "license": "ISC",
