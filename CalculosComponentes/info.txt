@@ -1,0 +1,3 @@
+Area Cuadrado: Lado * lado
+Area Rectangulo: Base * h
+Area Triangulo: (area * h)/ 2
