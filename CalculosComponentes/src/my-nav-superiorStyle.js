@@ -21,7 +21,8 @@ ul > li > a{
 }
 li{
     display: inline;
-    margin-right: 12px;
+    padding: 5px;
+    border-radius: 5px;
 }
 li:hover{
     background-color: #84B8D9;
