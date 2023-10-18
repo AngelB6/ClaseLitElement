@@ -1,0 +1,6 @@
+body{
+    min-width: 20vh;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 5px;
+}
