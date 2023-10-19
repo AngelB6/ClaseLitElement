@@ -1,53 +1,24 @@
 import { LitElement, html } from "lit-element";
 import compPrinStyle from "./comp-princStyle.js";
-// Cuadrado
-import { FormACuadrado } from "./components/form-a-cuadrado.js";
-import { FormPCuadrado } from "./components/form-p-cuadrado.js";
-// Rectangulo
-import { FormARectangulo } from "./components/form-a-rectangulo.js";
-import { FormPRectangulo } from "./components/form-p-rectangulo.js";
-// Triangulo
-import { FormATriangulo } from "./components/form-a-triangulo.js";
-import { FormPTriangulo } from "./components/form-p-triangulo.js";
-// Circulo
-import { FormACirculo } from "./components/form-a-circulo.js";
-import { FormPCirculo } from "./components/form-p-circulo.js";
-// Trapecio
-import { FormATrapecio } from "./components/form-a-trapecio.js";
-import { FormPTrapecio } from "./components/form-p-trapecio.js";
 
 export class ComponentPrin extends LitElement{
     static get styles(){
         return [compPrinStyle]
     }
-    render(){
-        return html`
-        <div class="contenedor-principal-nav">
-        <nav>
-            <ul>
-                <li><a href="#" @click=${() => this.mostrarComponente('aCuadrado')}>Area Cuadrado</a></li> 
-                <li><a href="#" @click=${() => this.mostrarComponente('pCuadrado')}>Perimetro Cuadrado</a></li> 
-                <li><a href="#" @click=${() => this.mostrarComponente('aRectangulo')}>Area Rectangulo</a></li>
-                <li><a href="#" @click=${() => this.mostrarComponente('pRectangulo')}>Perimetro Rectangulo</a></li>
-                <li><a href="#" @click=${() => this.mostrarComponente('aTriangulo')}>Area Triangulo</a></li>
-                <li><a href="#" @click=${() => this.mostrarComponente('pTriangulo')}>Perimetro Triangulo</a></li>
-                <li><a href="#" @click=${() => this.mostrarComponente('aCirculo')}>Area Circulo</a></li>
-                <li><a href="#" @click=${() => this.mostrarComponente('pCirculo')}>Perimetro Circulo</a></li>
-                <li><a href="#" @click=${() => this.mostrarComponente('aTrapecio')}>Area Trapecio</a></li>
-                <li><a href="#" @click=${() => this.mostrarComponente('pTrapecio')}>Perimetro Trapecio</a></li>
-            </ul>
-        </nav>
-        </div>
-        <main>
-            <div class="contenedor-principal"></div> 
-        </main>
-        `
+    static get properties(){
+        return {valor:{type : String}}
+    }
+    static get scopedElements(){
+        return {"form-a-cuadrado":FormACuadrado}
+    }
+    constructor(){
+        super()
+        this.valor = ''
     }
     mostrarComponente(componente){
-        const component = this.shadowRoot.querySelector('.contenedor-principal')
         switch (componente) {
             case 'aCuadrado':
-                component.innerHTML = '<form-a-cuadrado></form-a-cuadrado>'
+                this.valor = html`<form-a-cuadrado></form-a-cuadrado>`;
                 break;
             case 'pCuadrado':
                 component.innerHTML = '<form-p-cuadrado></form-p-cuadrado>'
@@ -79,6 +50,32 @@ export class ComponentPrin extends LitElement{
             default:
                 break;
         }
+        return this.valor;
+    }
+    render(){
+        return html`
+        <div class="contenedor-principal-nav">
+        <nav>
+            <ul>
+                <li><a href="#" @click=${() =>this.mostrarComponente('aCuadrado')}>Area Cuadrado</a></li> 
+                <!-- <li><a href="#" @click=${() => this.mostrarComponente('pCuadrado')}>Perimetro Cuadrado</a></li> 
+                <li><a href="#" @click=${() => this.mostrarComponente('aRectangulo')}>Area Rectangulo</a></li>
+                <li><a href="#" @click=${() => this.mostrarComponente('pRectangulo')}>Perimetro Rectangulo</a></li>
+                <li><a href="#" @click=${() => this.mostrarComponente('aTriangulo')}>Area Triangulo</a></li>
+                <li><a href="#" @click=${() => this.mostrarComponente('pTriangulo')}>Perimetro Triangulo</a></li>
+                <li><a href="#" @click=${() => this.mostrarComponente('aCirculo')}>Area Circulo</a></li>
+                <li><a href="#" @click=${() => this.mostrarComponente('pCirculo')}>Perimetro Circulo</a></li>
+                <li><a href="#" @click=${() => this.mostrarComponente('aTrapecio')}>Area Trapecio</a></li>
+                <li><a href="#" @click=${() => this.mostrarComponente('pTrapecio')}>Perimetro Trapecio</a></li> -->
+            </ul>
+        </nav>
+        </div>
+        <main>
+            <div class="contenedor-principal">
+                ${this.mostrarComponente()}
+            </div> 
+        </main>
+        `
     }
 }
 
