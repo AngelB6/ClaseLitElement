@@ -1,9 +1,9 @@
 import { LitElement, html } from "lit-element"
-import myFormPRectanguloStyle from "./my-form-p-rectanguloStyle";
+import formARectanguloStyle from "../css/form-a-rectanguloStyle.js";
 
-export class MyFormPRectangulo extends LitElement{
+export class FormARectangulo extends LitElement{
     static get styles(){
-        return [myFormPRectanguloStyle]
+        return [formARectanguloStyle]
     }
     static properties = {
         resultado: {
@@ -17,7 +17,7 @@ export class MyFormPRectangulo extends LitElement{
     render(){
         return html`
         <div class="contenedor-principal">
-            <h1>Calcular Perimetro Del Rectangulo</h1>
+            <h1>Calcular Area Del Rectangulo</h1>
             <div class="contenedor-formulario">
                 <form>
                     <img src="../templates/Rectangulo.png" alt="Rectangulo">
@@ -25,19 +25,19 @@ export class MyFormPRectangulo extends LitElement{
                     <input type="number" name="base" id="baseRec">
                     <label>Ingrese la altura del rectangulo:</label>
                     <input type="number" name="altura" id="alturaRec">
-                    <button type="button" @click=${this.calcularPerimetro}>Calcular</button>
-                    <p>El perimetro es: ${this.resultado}cm</p>
+                    <button type="button" @click=${this.calcularArea}>Calcular</button>
+                    <p>El area es: ${this.resultado}cm²</p>
                 </form>
             </div>
         </div>
         `;
     }
-    calcularPerimetro(){
+    calcularArea(){
         const base = this.shadowRoot.getElementById("baseRec").value;
         const altura = this.shadowRoot.getElementById("alturaRec").value;
-        const resultado = ((base*2) + (altura*2));
+        const resultado = base * altura;
         this.resultado = resultado;
     }            
 }
 
-customElements.define('my-form-p-rectangulo', MyFormPRectangulo)
+customElements.define('form-a-rectangulo', FormARectangulo)

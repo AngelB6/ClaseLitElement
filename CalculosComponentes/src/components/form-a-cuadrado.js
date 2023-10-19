@@ -1,9 +1,9 @@
 import { LitElement, html } from "lit-element"
-import myFormPCuadradoStyle from "./my-form-p-cuadradoStyle";
+import formACuadradoStyle from "../css/form-a-cuadradoStyle"
 
-export class MyFormPCuadrado extends LitElement{
+export class FormACuadrado extends LitElement{
     static get styles(){
-        return [myFormPCuadradoStyle]
+        return [formACuadradoStyle]
     }
     static properties = {
         lado: {
@@ -17,24 +17,24 @@ export class MyFormPCuadrado extends LitElement{
     render(){
         return html`
         <div class="contenedor-principal">
-            <h1>Calcular Primetro Del Cuadrado</h1>
+            <h1>Calcular Area Del Cuadrado</h1>
             <div class="contenedor-formulario">
                 <form>
-                    <img src="../templates/Cuadrado.png" alt="Cuadrado">
-                    <label>Ingrese un lado del cuadrado:</label>
+                    <img alt="Cuadrado" src="../templates/Cuadrado.png">
+                    <label>Ingrese el lado del cuadrado:</label>
                     <input type="number" name="lado" id="ladoCua">
-                    <button type="button" @click=${this.calcularPerimetro}>Calcular</button>
-                    <p>El perimetro es: ${this.lado}cm</p>
+                    <button type="button" @click=${this.calcularArea}>Calcular</button>
+                    <p>El area es: ${this.lado}cm²</p>
                 </form>
             </div>
         </div>
         `;
     }
-    calcularPerimetro(){
+    calcularArea(){
         const l = this.shadowRoot.getElementById("ladoCua").value;
-        const resultado = l*4;
+        const resultado = l*l;
         this.lado = resultado;
     }            
 }
 
-customElements.define('my-form-p-cuadrado', MyFormPCuadrado)
+customElements.define('form-a-cuadrado', FormACuadrado)

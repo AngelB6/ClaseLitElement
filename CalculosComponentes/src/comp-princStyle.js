@@ -22,7 +22,7 @@ ul > li > a{
 }
 li{
     display: inline;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
 }
 li:hover{

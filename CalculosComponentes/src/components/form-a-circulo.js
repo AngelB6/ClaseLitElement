@@ -1,9 +1,9 @@
 import { LitElement, html } from "lit-element"
-import myFormACirculoStyle from "./my-form-a-circuloStyle"
+import formACirculoStyle from "../css/form-a-circuloStyle"
 
-export class MyFormACirculo extends LitElement{
+export class FormACirculo extends LitElement{
     static get styles(){
-        return [myFormACirculoStyle]
+        return [formACirculoStyle]
     }
     static properties = {
         resultado: {
@@ -21,10 +21,10 @@ export class MyFormACirculo extends LitElement{
             <div class="contenedor-formulario">
                 <form>
                     <img src="../templates/Circulo.png" alt="Circulo">
-                    <label>Ingrese el radio del circulo:</label>
-                    <input type="number" name="radio" id="radioCir">
-                    <button type="button" @click=${this.calcularArea}>Calcular</button>
-                    <p>El area es: ${this.resultado}m²</p>
+                        <label>Ingrese el radio del circulo:</label>
+                        <input type="number" name="radio" id="radioCir">
+                        <button type="button" @click=${this.calcularArea}>Calcular</button>
+                        <p>El area es: ${this.resultado}m²</p>
                 </form>
             </div>
         </div>
@@ -38,4 +38,4 @@ export class MyFormACirculo extends LitElement{
     }            
 }
 
-customElements.define('my-form-a-circulo', MyFormACirculo)
+customElements.define('form-a-circulo', FormACirculo)
