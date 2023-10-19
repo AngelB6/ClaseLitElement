@@ -9,12 +9,12 @@ export default css`
     min-width: 100vh;
     flex-direction: column;
     font-family: monospace;
-    margin-top: -1vh;
+    margin-top: -2vh;
 }
 .contenedor-formulario > form{ 
     display: flex;
     flex-direction: column;
-    padding: 5vh 10vh;
+    padding: 2vh 10vh;
     border: 0.2rem solid #84B8D9;
     border-radius: 20px;
     gap: 5vh;

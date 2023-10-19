@@ -14,7 +14,7 @@ export default css`
 .contenedor-formulario > form{ 
     display: flex;
     flex-direction: column;
-    padding: 5vh 10vh;
+    padding: 1.5vh 10vh;
     border: 0.2rem solid #84B8D9;
     border-radius: 20px;
     gap: 5vh;

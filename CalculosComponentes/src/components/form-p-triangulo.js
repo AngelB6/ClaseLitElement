@@ -1,9 +1,9 @@
 import { LitElement, html } from "lit-element"
-import myFormPTrianguloStyle from "./my-form-p-trianguloStyle";
+import formPTrianguloStyle from "../css/form-p-trianguloStyle";
 
-export class MyFormPTriangulo extends LitElement{
+export class FormPTriangulo extends LitElement{
     static get styles(){
-        return [myFormPTrianguloStyle]
+        return [formPTrianguloStyle]
     }
     static properties = {
         resultado: {
@@ -43,4 +43,4 @@ export class MyFormPTriangulo extends LitElement{
     }            
 }
 
-customElements.define('my-form-p-triangulo', MyFormPTriangulo)
+customElements.define('form-p-triangulo', FormPTriangulo)

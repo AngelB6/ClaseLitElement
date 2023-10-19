@@ -1,9 +1,9 @@
 import { LitElement, html } from "lit-element"
-import myFormATrapecioStyle from "./my-form-a-trapecioStyle";
+import formATrapecioStyle from "../css/form-a-trapecioStyle";
 
-export class MyFormATrapecio extends LitElement{
+export class FormATrapecio extends LitElement{
     static get styles(){
-        return [myFormATrapecioStyle]
+        return [formATrapecioStyle]
     }
     static properties = {
         lado: {
@@ -43,4 +43,4 @@ export class MyFormATrapecio extends LitElement{
     }            
 }
 
-customElements.define('my-form-a-trapecio', MyFormATrapecio)
+customElements.define('form-a-trapecio', FormATrapecio)

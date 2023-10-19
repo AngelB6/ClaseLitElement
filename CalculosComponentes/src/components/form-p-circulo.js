@@ -1,9 +1,9 @@
 import { LitElement, html } from "lit-element"
-import myFormPCirculoStyle from "./my-form-p-circuloStyle"
+import formPCirculoStyle from "../css/form-p-circuloStyle"
 
-export class MyFormPCirculo extends LitElement{
+export class FormPCirculo extends LitElement{
     static get styles(){
-        return [myFormPCirculoStyle]
+        return [formPCirculoStyle]
     }
     static properties = {
         resultado: {
@@ -38,4 +38,4 @@ export class MyFormPCirculo extends LitElement{
     }            
 }
 
-customElements.define('my-form-p-circulo', MyFormPCirculo)
+customElements.define('form-p-circulo', FormPCirculo)

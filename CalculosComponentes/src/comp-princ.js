@@ -8,8 +8,13 @@ import { FormARectangulo } from "./components/form-a-rectangulo.js";
 import { FormPRectangulo } from "./components/form-p-rectangulo.js";
 // Triangulo
 import { FormATriangulo } from "./components/form-a-triangulo.js";
+import { FormPTriangulo } from "./components/form-p-triangulo.js";
 // Circulo
 import { FormACirculo } from "./components/form-a-circulo.js";
+import { FormPCirculo } from "./components/form-p-circulo.js";
+// Trapecio
+import { FormATrapecio } from "./components/form-a-trapecio.js";
+import { FormPTrapecio } from "./components/form-p-trapecio.js";
 
 export class ComponentPrin extends LitElement{
     static get styles(){
@@ -57,19 +62,19 @@ export class ComponentPrin extends LitElement{
                 component.innerHTML = '<form-a-triangulo></form-a-triangulo>'
                 break;    
             case 'pTriangulo':
-                component.innerHTML = '<h1>Head</h1>'
+                component.innerHTML = '<form-p-triangulo></form-p-triangulo>'
                 break;    
             case 'aCirculo':
                 component.innerHTML = '<form-a-circulo></form-a-circulo>'
                 break;
             case 'pCirculo':
-                component.innerHTML = '<h1>Head</h1>'
+                component.innerHTML = '<form-p-circulo></form-p-circulo>'
                 break;
             case 'aTrapecio':
-                component.innerHTML = '<h1>Head</h1>'
+                component.innerHTML = '<form-a-trapecio></form-a-trapecio>'
                 break;
             case 'pTrapecio':
-                component.innerHTML = '<h1>Head</h1>'
+                component.innerHTML = '<form-p-trapecio></form-p-trapecio>'
                 break;               
             default:
                 break;
