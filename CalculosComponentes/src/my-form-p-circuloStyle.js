@@ -22,7 +22,7 @@ export default css`
 }
 img{   
     margin-left: 1%;
-    height: 150px;
+    height: 180px;
     width: 220px;
 }
 button{

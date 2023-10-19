@@ -13,7 +13,8 @@ export default css`
     max-height: 10vh;
     min-width: 100vh;
     padding: 10px;
-    // border: 1px solid red;
+    align-items: center;
+    justify-content: center;
 }
 ul > li > a{
     text-decoration: none;
@@ -21,7 +22,7 @@ ul > li > a{
 }
 li{
     display: inline;
-    padding: 5px;
+    padding: 15px;
     border-radius: 5px;
 }
 li:hover{

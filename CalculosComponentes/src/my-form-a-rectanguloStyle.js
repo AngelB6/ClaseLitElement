@@ -11,7 +11,7 @@ export default css`
     font-family: monospace;
     margin-top: -3vh;
 }
-.contenedor-formulario > form{
+.contenedor-formulario > form{ 
     display: flex;
     flex-direction: column;
     padding: 5vh 10vh;
@@ -23,7 +23,7 @@ export default css`
 img{   
     margin-left: 1%;
     height: 150px;
-    width: 220px;
+    width: 250px;
 }
 button{
     background-color: #84B8D9;

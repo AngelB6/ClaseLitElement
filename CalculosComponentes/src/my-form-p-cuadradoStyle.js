@@ -11,7 +11,7 @@ export default css`
     font-family: monospace;
     margin-top: -3vh;
 }
-.contenedor-formulario > form{
+.contenedor-formulario > form{ 
     display: flex;
     flex-direction: column;
     padding: 5vh 10vh;

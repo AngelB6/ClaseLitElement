@@ -9,9 +9,9 @@ export default css`
     min-width: 100vh;
     flex-direction: column;
     font-family: monospace;
-    margin-top: -3vh;
+    margin-top: -1vh;
 }
-.contenedor-formulario > form{
+.contenedor-formulario > form{ 
     display: flex;
     flex-direction: column;
     padding: 5vh 10vh;
